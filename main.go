@@ -27,7 +27,11 @@ func main() {
 			if err != nil {
 				return
 			}
-
+			/*
+				if system.CheckCommand(input) == "" {
+					fmt.Println("gosh: command not found:" + input)
+				}
+			*/
 		}
 	}
 }
