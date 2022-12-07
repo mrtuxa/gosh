@@ -23,6 +23,16 @@ func ExecCommand(command string) (int, error) {
 	return fmt.Println(string(stdout))
 }
 
+func CheckCommand(command string) (int, error) {
+	cmd := exec.Command("which", command)
+	stdout, err := cmd.Output()
+	if err != nil {
+		fmt.Println(err.Error())
+		return 0, nil
+	}
+	return fmt.Println(string(stdout))
+}
+
 func GetHostname() string {
 	hostname, _ := os.Hostname()
 	return hostname
