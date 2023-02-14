@@ -31,6 +31,10 @@ func Magenta() string {
 	return magenta
 }
 
+func Reset() string {
+	return reset
+}
+
 func printColor(color string, text string) string {
 	return color + text + reset
 }

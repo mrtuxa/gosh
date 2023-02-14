@@ -17,13 +17,13 @@ func GetHostname() string {
 }
 
 func ShellLine() {
-	color.Print(color.Red(), "[")
+	color.Print(color.Green(), "╭── ")
 	color.Print(color.Yellow(), GetUsername())
 	color.Print(color.Green(), "@")
 	color.Print(color.Blue(), GetHostname())
-	color.Print(color.Magenta(), " "+GetCurrentPath())
-	color.Print(color.Red(), "]")
-	fmt.Print("$ ")
+	color.Print(color.Magenta(), " \uF07C  "+GetCurrentPath())
+	color.Print(color.Red(), "]\n")
+	fmt.Print(color.Green() + "╰─  " + color.Reset())
 }
 
 func GetCurrentPath() string {

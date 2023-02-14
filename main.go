@@ -18,6 +18,11 @@ func main() {
 		input, _ := reader.ReadString('\n')
 		input = strings.TrimSuffix(input, "\n")
 		args := strings.Fields(input)
+
+		if len(args) == 0 {
+			continue
+		}
+
 		if args[0] == "cd" {
 			// change the working directory
 			if len(args) == 1 {
